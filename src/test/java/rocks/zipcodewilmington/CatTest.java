@@ -40,4 +40,39 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    public void setNameTest() {
+        // Give cat data name ,birthdate, id
+        String nameGiven = "Gotti";
+        Date giveBirthDate = new Date();
+        Integer giveId = 5;
+
+
+        //when this action (when cat is constructed)
+        Cat cat = new Cat(nameGiven, giveBirthDate, giveId);
+        //When we get dsta from the cat
+
+        String retrieveName = cat.getName();
+        //then we (expect the given data, to match the retrieved data)
+        Assert.assertEquals(nameGiven, retrieveName);
+    }
+
+    public void getBirthDateTest(){
+        //Given
+        String nameGiven = "Gotti";
+        Date giveBirthDate = new Date();
+        Integer giveId = 5;
+
+        //When
+        Cat cat = new Cat (nameGiven, giveBirthDate, giveId);
+        //When
+        Date retrieveDate = cat.getBirthDate();
+
+        //Then
+        Assert.assertEquals(giveBirthDate, retrieveDate);
+    }
+     public void setBirthDate(){
+        //Given Cat data
+
+     }
+
 }
